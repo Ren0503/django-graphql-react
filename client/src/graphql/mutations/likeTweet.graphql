@@ -1,0 +1,6 @@
+mutation LikeTweet($tweetId: Int!) {
+  likeTweet(tweetId: $tweetId) {
+    success
+    isLiked
+  }
+}

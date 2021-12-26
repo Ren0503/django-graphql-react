@@ -1,0 +1,17 @@
+fragment RegularUser on UserWithFollowNode {
+  id
+  displayName
+  email
+  username
+  bio
+  pk
+  photo
+  verified
+  followersCount
+  followingCount
+  isFollowed
+  isFollowing
+  isSelf
+  private
+  isRequested
+}

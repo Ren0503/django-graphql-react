@@ -1,0 +1,14 @@
+mutation PostTweet($text: String!, $file: Upload, $commentTo: Int) {
+  postTweet(text: $text, file: $file, commentTo: $commentTo) {
+    success
+    tweet {
+      id
+      pk
+      text
+      createdAt
+      likesCount
+      retweetCount
+      isLiked
+    }
+  }
+}

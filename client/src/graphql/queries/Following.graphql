@@ -1,0 +1,10 @@
+query Following($username: String!, $after: String, $first: Int) {
+  following(uname: $username, after: $after, first: $first) {
+    edges {
+      cursor
+      node {
+        ...RegularUser
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+query Unfollowed {
+  unfollowed {
+    edges {
+      node {
+        ...RegularUser
+      }
+    }
+  }
+}

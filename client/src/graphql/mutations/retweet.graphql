@@ -1,0 +1,6 @@
+mutation RetweetTweet($tweetId: Int!) {
+  retweet(tweetId: $tweetId) {
+    success
+    isRetweeted
+  }
+}

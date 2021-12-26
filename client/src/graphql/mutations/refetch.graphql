@@ -1,0 +1,5 @@
+mutation RefetchData($data: String) {
+  refetch(data: $data) {
+    success
+  }
+}

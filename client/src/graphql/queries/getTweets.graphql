@@ -1,0 +1,42 @@
+query getTweets(
+  $after: String
+  $commentTo: ID
+  $first: Int
+  $username: String
+  $excludeComment: Boolean
+  $offset: Int
+  $timeline: Boolean
+  $commentToPk: Int
+) {
+  tweets(
+    after: $after
+    commentTo: $commentTo
+    first: $first
+    username: $username
+    excludeComment: $excludeComment
+    offset: $offset
+    timeline: $timeline
+    commentToPk: $commentToPk
+  ) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        user {
+          ...RegularUser
+        }
+        id
+        pk
+        text
+        createdAt
+        likesCount
+        retweetCount
+        commentsCount
+        isLiked
+        image
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+mutation Follow($userId: Int!) {
+  follow(userId: $userId) {
+    success
+    isFollowed
+    user {
+      ...RegularUser
+    }
+    isRequested
+  }
+}
